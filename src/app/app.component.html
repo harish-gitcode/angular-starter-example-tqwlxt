@@ -1,6 +1,6 @@
-<div *ngFor='let car of cars; let i=index'>
+<div *ngFor='let car of cars;'>
 <br>
-car {{ i }} company {{ car.company }} miles driven {{car.miles}} 
-<br>car model {{car.model}} is premium car = {{car.premium}}
+car company <b>{{ car.company }}</b> miles driven = {{car.miles}} 
+<br>car model <em>{{car.model}}</em> is premium car = {{car.premium}}
 
 </div>
