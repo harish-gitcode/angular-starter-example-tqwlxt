@@ -17,3 +17,13 @@
     {{ word }}
   </p>
 </div>
+<div>
+  <input [(ngModel)]="company" placeholder="enter a car company" />
+  <input [(ngModel)]="model" placeholder="enter a car model" />
+  <input [(ngModel)]="miles" type="number" placeholder="enter a  miles" />
+  <br />
+</div>
+<div>
+  <br />
+  <button (click)="addCar()">add Car</button>
+</div>

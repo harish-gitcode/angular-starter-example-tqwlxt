@@ -10,6 +10,9 @@ import { Car } from './car';
 export class AppComponent {
   num = 0;
   word = '';
+  company: string;
+  model: string;
+  miles: number;
   cars: Car[];
   constructor(private ts: TransportService) {
     //here ts is the name we can change it to our liking
@@ -27,5 +30,9 @@ export class AppComponent {
   }
   print() {
     this.word += 'Printing.....';
+  }
+  addCar() {
+    const newCar: Car = {company: this.company, miles: this.miles,  model: this.model};
+    this.ts.addCar(newCar);
   }
 }

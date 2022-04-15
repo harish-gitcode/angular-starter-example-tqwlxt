@@ -25,6 +25,9 @@ export class TransportService {
   getCars() {
     return this.cars;
   }
+  addCar(car: Car) {
+    this.cars.push(car);
+  }
 
   // this is where we will write methods to export our Car array
 }
