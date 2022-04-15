@@ -1,6 +1,18 @@
-<div *ngFor='let car of cars;'>
-<br>
-car company <b>{{ car.company }}</b> miles driven = {{car.miles}} 
-<br>car model <em>{{car.model}}</em> is premium car = {{car.premium}}
-
+<div *ngFor="let car of cars">
+  <br />
+  car company <b>{{ car.company }}</b> miles driven = {{ car.miles }} <br />car
+  model <em>{{ car.model }}</em> is premium car = {{ car.premium }}
+</div>
+<div>
+  <h3>Counter: {{ num }}</h3>
+  <button (click)="increment()">Click to buy</button>
+  <button class="reset" (click)="reset()">reset</button>
+</div>
+<div>
+  <h3>click to print string</h3>
+  <button (click)="print()">Click</button>
+  <br />
+  <p>
+    {{ word }}
+  </p>
 </div>

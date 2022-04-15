@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TransportService } from './transport.service';
 import { Car } from './car';
 
 @Component({
@@ -7,18 +8,23 @@ import { Car } from './car';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  subaru: Car = {
-    company: 'Subaru',
-    model: 'Outback',
-    miles: 58232,
-    premium: false,
-  };
-  honda: Car = {
-    company: 'Honda',
-    model: 'Accord',
-    miles: 39393,
-    premium: true,
-  };
-  bmw: Car = { company: 'BMW', model: 'X3', miles: 4400 };
-  cars: Car[] = [this.subaru, this.honda, this.bmw];
+  num = 0;
+  word ="";
+  cars: Car[];
+  constructor(private ts: TransportService) {
+    //here ts is the name we can change it to our liking
+    this.cars = this.ts.getCars();
+  }
+  saySomething() {
+    alert('Thanks for chosing this car');
+  }
+  increment() {
+    this.num++;
+  }
+  reset() {
+    this.num = 0;
+  }
+  print(){
+    this.word+="Printing.....";
+  }
 }
