@@ -9,7 +9,7 @@ import { Car } from './car';
 })
 export class AppComponent {
   num = 0;
-  word ="";
+  word = '';
   cars: Car[];
   constructor(private ts: TransportService) {
     //here ts is the name we can change it to our liking
@@ -23,8 +23,9 @@ export class AppComponent {
   }
   reset() {
     this.num = 0;
+    this.word = '';
   }
-  print(){
-    this.word+="Printing.....";
+  print() {
+    this.word += 'Printing.....';
   }
 }
